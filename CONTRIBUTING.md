@@ -2,7 +2,7 @@
 
 We love Pull Requests! Your contributions help drive development.
 
-## Getting Started
+## Welcome
 
 Thanks for your interest in supporting our mission - to develop software that addresses needs in cancer biology and precision medicine.
 Both software development and cancer research require multi-disciplinary expertise and collaboration, and we welcome any and all help whether
@@ -13,19 +13,21 @@ If you haven't already, start by signing up for a [GitHub account](https://githu
 ## Getting Started
 
 You can clone this repository locally from GitHub using the "Clone in Desktop" 
-button from the main project site, or run this command in the Git Shell:
+button from the main project site or run this command in the Git Shell:
 
 `git clone git@github.com:FredHutch/oncoscape.git Oncoscape`
 
 If you want to make contributions to the project, 
 [forking the project](https://help.github.com/articles/fork-a-repo) is the 
-easiest way to do this. You can then clone down your fork instead:
+easiest way to do this. You can then clone down your fork using:
 
 `git clone git@github.com:MY-USERNAME-HERE/Oncoscape.git Oncoscape`
 
 After doing that, follow the [Installation instructions](INSTALL.md) to install, test, and run the software package.
 
 Check out our [cheatsheet](cheatsheet.md) for tips and tricks for some common git commands.
+
+If you have another feature/tab to add to Oncoscape, please contact us at contact@oncoscape.org and read how to [link your repo as a subModule](#-add-a-new-feature).  
 
 ### How is the codebase organized?
 
@@ -107,6 +109,24 @@ Some things that will increase the chance that your pull request is accepted.
 * Include unit tests that would otherwise fail without your code, but pass with it.
 * Update the documentation, the surrounding one, examples elsewhere, guides, 
   whatever is affected by your contribution
+
+# Add a new feature
+
+Each tab is developed independently so that new analysis methods can be added in a plug-and-play fashion.  Externally developed features are linked through subModules in the (Oncoscape/inst/scripts)[Oncoscape/inst/scripts/] directory and appear as any other tab.  When Oncoscape is cloned, the files within subModules will not be automatically included, allowing users to choose which feature code to request.  To get all features, use the following command when initially cloning Oncoscape
+```
+git clone --recursive git://github.com/FredHutch/Oncoscape.git
+```
+If you have already cloned Oncoscape, recursively update the repository using 
+```
+git submodule update --init --recursive
+```
+Alternatively, update individual subModules by
+```
+cd subModule/path
+git subModule init
+git subModule update
+```
+
 
 # Additional Resources
 
