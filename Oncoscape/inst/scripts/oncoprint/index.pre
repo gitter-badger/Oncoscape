@@ -1,6 +1,6 @@
 include(../index.common)
 include(../common.css)
-include(src/css/oncoprint.css)
+include(oncoprintjs/src/css/oncoprint.css)
 <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js"></script>
 <script type="text/javascript" src="http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js"></script>
@@ -14,13 +14,13 @@ hub.start();
 <body>
 include(widget.html)
 <script>
-include(src/js/events.js);
-include(src/js/utils.js);
-include(src/js/defaults.js);
-include(src/js/RuleSet.js);
-include(src/js/OncoprintRenderer.js);
-include(src/js/OncoprintSVGRenderer.js);
-include(src/js/oncoprint.js);
+include(oncoprintjs/src/js/events.js);
+include(oncoprintjs/src/js/utils.js);
+include(oncoprintjs/src/js/defaults.js);
+include(oncoprintjs/src/js/RuleSet.js);
+include(oncoprintjs/src/js/OncoprintRenderer.js);
+include(oncoprintjs/src/js/OncoprintSVGRenderer.js);
+include(oncoprintjs/src/js/oncoprint.js);
 </script>
 </body>
 
