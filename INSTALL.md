@@ -136,6 +136,20 @@ The first thing that you'll need to do is download the Oncoscape application sou
 cd /<path>
 git clone https://github.com/FredHutch/Oncoscape.git
 ```
+Note that externally developed features are linked through subModules in the [Oncoscape/inst/scripts](Oncoscape/inst/scripts/) directory and appear as any other tab.  When Oncoscape is cloned, the files within subModules will not be automatically included, allowing users to choose which feature code to request.  To get all features, use the following command when initially cloning Oncoscape
+```
+git clone --recursive http://github.com/FredHutch/Oncoscape.git
+```
+If you have already cloned Oncoscape, update the repository to include all subModules using 
+```
+git submodule update --init --recursive
+```
+Alternatively, update individual subModules by
+```
+cd subModule/path
+git subModule init
+git subModule update
+```
 
 After the git clone is complete, switch to the directory where Oncoscape was downloaded and build it with the "sudo make install" command as shown below:
 
@@ -181,6 +195,21 @@ The first thing that you'll need to do is download the Oncoscape application fro
 ```
 cd C:\<path>
 git clone https://github.com/FredHutch/Oncoscape.git
+```
+
+Note that externally developed features are linked through subModules in the [Oncoscape/inst/scripts](Oncoscape/inst/scripts/) directory and appear as any other tab.  When Oncoscape is cloned, the files within subModules will not be automatically included, allowing users to choose which feature code to request.  To get all features, use the following command when initially cloning Oncoscape
+```
+git clone --recursive http://github.com/FredHutch/Oncoscape.git
+```
+If you have already cloned Oncoscape, update the repository to include all subModules using 
+```
+git submodule update --init --recursive
+```
+Alternatively, update individual subModules by
+```
+cd subModule/path
+git subModule init
+git subModule update
 ```
 
 After the git clone is complete, switch to the directory where Oncoscape was downloaded and build it with the "make install" command as shown below:
